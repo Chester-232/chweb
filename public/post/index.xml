@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Chester-232</title>
+    <title>Posts on Chester&#39;s 2nd Brain</title>
     <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on Chester-232</description>
+    <description>Recent content in Posts on Chester&#39;s 2nd Brain</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Mar 2025 14:37:53 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Mar 2025 22:23:14 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample</title>
+      <link>http://localhost:1313/post/sample/</link>
+      <pubDate>Wed, 26 Mar 2025 22:17:38 +0800</pubDate>
+      <guid>http://localhost:1313/post/sample/</guid>
+      <description>Sample post that will never go online</description>
+    </item>
     <item>
       <title>Fixing &#39;iwlwifi failed with error -110&#39; on Linux After Dual Boot with Windows</title>
       <link>http://localhost:1313/post/wififix/</link>
@@ -16,11 +23,11 @@
       <description>Fixing “iwlwifi failed with error -110” on Linux After Dual Booting with windows 10/11</description>
     </item>
     <item>
-      <title>Algo</title>
+      <title>Understanding Algorithms and Pseudocode</title>
       <link>http://localhost:1313/post/algo/</link>
       <pubDate>Sat, 22 Mar 2025 21:21:43 +0800</pubDate>
       <guid>http://localhost:1313/post/algo/</guid>
-      <description>A short and simple discussion about algorithms and psuedo code</description>
+      <description>A beginner-friendly guide to understanding algorithms and pseudocode, with simple and complex examples.</description>
     </item>
   </channel>
 </rss>

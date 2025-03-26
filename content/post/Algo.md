@@ -1,13 +1,14 @@
 +++
-date = '2025-03-22T21:21:43+08:00'
+date = "2025-03-22T21:21:43+08:00"
 draft = false
-title = 'Understanding Algorithms and Pseudocode'
-tag = 'discrete math'
+title = "Understanding Algorithms and Pseudocode"
+tags = ["Programming", "Pseudocode"]
 summary = "A beginner-friendly guide to understanding algorithms and pseudocode, with simple and complex examples."
 
 [params]
 math = true
 +++
+
 
 # Introduction
 

@@ -3,13 +3,15 @@ date = '2025-03-26T13:44:12+08:00'
 draft = false
 title = "Fixing 'iwlwifi failed with error -110' on Linux After Dual Boot with Windows"
 summary = "Fixing “iwlwifi failed with error -110” on Linux After Dual Booting with windows 10/11"
+
+tags = ["linux", "wifi"]
 +++
 
 # Fixing “iwlwifi failed with error -110” on Linux After Dual Booting
 
 Dual booting Windows and Linux can be a great way to enjoy the best of both worlds. However, if you’re experiencing issues with your Intel Wi‑Fi card on Linux—especially when switching from Windows—the error message below might look familiar in your system logs:
 
-```
+```log
 [    6.397335] iwlwifi 0000:02:00.0: probe with driver iwlwifi failed with error -110
 ```
 
@@ -38,7 +40,8 @@ When you boot directly into Linux after using Windows, the leftover power state 
 After some troubleshooting, I discovered that disabling Windows Fast Startup resolved the problem permanently. Here’s how you can do it:
 
 1. **Boot into Windows 10:**  
-   Open the Control Panel and navigate to **Power Options** you can press `win + R` and type `control panel` to open it up, or just right click in the battery icon in the taskbar(if only on laptop).
+   Open the Control Panel and go to **Power Options**. You can press `Win + R`, type `control panel`, and hit Enter to open it. Alternatively, if you're using a laptop, you can right-click the battery icon in the taskbar to access power settings.
+
 
 2. **Access Shutdown Settings:**  
    Click on **"Choose what the power buttons do"** on the left-hand side.  
@@ -58,7 +61,7 @@ Once you’ve disabled Fast Startup, the Wi‑Fi card resets fully when shutting
 
 After making the changes, boot into Linux and run:
 ```bash
-dmesg | grep -i iwlwifi
+sudo dmesg | grep -i iwlwifi
 ```
 If you no longer see the error message and your wireless interface appears in the output of:
 ```bash

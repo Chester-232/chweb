@@ -1,22 +1,39 @@
 baseURL = "https://chweb.pages.dev/"
 languageCode = 'en-us'
-title = 'Chester-232'
+title = "Chester's 2nd Brain"
 theme = 'github-style'
-
-
 lastmod = true
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 [frontmatter]
 lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [params]
-  author = "Chester232"
-  description = "Bugs are friends."
-  github = "Chester-232"
-  email = "earlchesterantonio61@gmail.com"
-  facebook = "earlchester.antonio232"
-  keywords = "blog, google analytics"
-  lastmod = true
-  userStatusEmoji = "💤"
-  favicon = "/images/github-mark-white.png"
-  avatar = "/images/avatar.png"
-  location = "Philippines"
+#local search
+enableLocalSearch = true
+
+#makes the graph interactive
+clickableDayContributions = true
+
+author = "Mekimemo"
+description = "Bugs are friends."
+github = "Chester-232"
+email = "earlchesterantonio61@gmail.com"
+facebook = "earlchester.antonio232"
+keywords = "blog, google analytics"
+lastmod = true
+userStatusEmoji = "💤"
+favicon = "/images/github-mark-white.png"
+avatar = "/images/aqua.png"
+location = "Philippines"
+headerIcon = "/images/github-mark-white.png"
+enableSearch = true
+
+[outputs]
+home = ["html", "json"]
+
+[outputFormats.json]
+mediaType = "application/json"
+baseName = "index"
+isPlainText = false
