@@ -1,6 +1,6 @@
 +++
 date = '2025-03-22T21:21:43+08:00'
-draft = false
+draft = true
 title = 'Algo'
 tag = 'discrete math'
 summary = "A short and simple discussion about algorithms and psuedo code"
