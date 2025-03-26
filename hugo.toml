@@ -1,4 +1,4 @@
-baseURL = 'Chester-232.github.io'
+baseURL = "https://chweb.pages.dev/"
 languageCode = 'en-us'
 title = 'Chester-232'
 theme = 'github-style'
