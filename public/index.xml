@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chester-232</title><link>Chester-232.github.io/</link><description>Recent content on Chester-232</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 26 Mar 2025 14:37:53 +0800</lastBuildDate><atom:link href="Chester-232.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Fixing 'iwlwifi failed with error -110' on Linux After Dual Boot with Windows</title><link>Chester-232.github.io/post/wififix/</link><pubDate>Wed, 26 Mar 2025 13:44:12 +0800</pubDate><guid>Chester-232.github.io/post/wififix/</guid><description>Fixing “iwlwifi failed with error -110” on Linux After Dual Booting with windows 10/11</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chester-232</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Chester-232</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Mar 2025 14:53:41 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixing &#39;iwlwifi failed with error -110&#39; on Linux After Dual Boot with Windows</title>
+      <link>http://localhost:1313/post/wififix/</link>
+      <pubDate>Wed, 26 Mar 2025 13:44:12 +0800</pubDate>
+      <guid>http://localhost:1313/post/wififix/</guid>
+      <description>Fixing “iwlwifi failed with error -110” on Linux After Dual Booting with windows 10/11</description>
+    </item>
+    <item>
+      <title>Understanding Algorithms and Pseudocode</title>
+      <link>http://localhost:1313/post/algo/</link>
+      <pubDate>Sat, 22 Mar 2025 21:21:43 +0800</pubDate>
+      <guid>http://localhost:1313/post/algo/</guid>
+      <description>A beginner-friendly guide to understanding algorithms and pseudocode, with simple and complex examples.</description>
+    </item>
+  </channel>
+</rss>
