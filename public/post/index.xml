@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Chester-232</title>
+    <link>//localhost:1313/post/</link>
+    <description>Recent content in Posts on Chester-232</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Mar 2025 13:45:27 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixing &#39;iwlwifi failed with error -110&#39; on Linux After Dual Boot with Windows</title>
+      <link>//localhost:1313/post/wififix/</link>
+      <pubDate>Wed, 26 Mar 2025 13:44:12 +0800</pubDate>
+      <guid>//localhost:1313/post/wififix/</guid>
+      <description>&lt;h1 id=&#34;fixing-iwlwifi-failed-with-error--110-on-linux-after-dual-booting&#34;&gt;Fixing “iwlwifi failed with error -110” on Linux After Dual Booting&lt;/h1&gt;&#xA;&lt;p&gt;Dual booting Windows and Linux can be a great way to enjoy the best of both worlds. However, if you’re experiencing issues with your Intel Wi‑Fi card on Linux—especially when switching from Windows—the error message below might look familiar in your system logs:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[    6.397335] iwlwifi 0000:02:00.0: probe with driver iwlwifi failed with error -110&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this post, we’ll explore what this error means, why it may occur in a dual-boot setup, and a simple fix that worked for me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Algo</title>
+      <link>//localhost:1313/post/algo/</link>
+      <pubDate>Sat, 22 Mar 2025 21:21:43 +0800</pubDate>
+      <guid>//localhost:1313/post/algo/</guid>
+      <description>A short and simple discussion about algorithms and psuedo code</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+baseURL = 'Chester-232.github.io'
+languageCode = 'en-us'
+title = 'Chester-232'
+theme = 'github-style'
+
+
+lastmod = true
+[frontmatter]
+lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[params]
+  author = "Chester232"
+  description = "Bugs are friend."
+  #github = "Chester-232"
+  email = "earlchesterantonio61@gmail.com"
+  keywords = "blog, google analytics"
+  lastmod = true
+  userStatusEmoji = "💤"
+  favicon = "/images/github.png"
+  avatar = "/images/avatar.png"
+  location = "Philippines"
