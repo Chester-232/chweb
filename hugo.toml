@@ -16,6 +16,6 @@ lastmod = ["lastmod", ":fileModTime", ":default"]
   keywords = "blog, google analytics"
   lastmod = true
   userStatusEmoji = "💤"
-  favicon = "/images/github.png"
+  favicon = "/images/github-mark-white.png"
   avatar = "/images/avatar.png"
   location = "Philippines"
