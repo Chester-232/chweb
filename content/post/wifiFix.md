@@ -1,6 +1,6 @@
 +++
 date = '2025-03-26T13:44:12+08:00'
-draft = true
+draft = false
 title = "Fixing 'iwlwifi failed with error -110' on Linux After Dual Boot with Windows"
 summary = "Fixing “iwlwifi failed with error -110” on Linux After Dual Booting with windows 10/11"
 +++
