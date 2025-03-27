@@ -4,7 +4,7 @@ draft = false
 title = "Fixing 'iwlwifi failed with error -110' on Linux After Dual Boot with Windows"
 summary = "Fixing “iwlwifi failed with error -110” on Linux After Dual Booting with windows 10/11"
 
-tags = ["linux", "wifi"]
+tags = ["Linux", "Wifi"]
 +++
 
 # Fixing “iwlwifi failed with error -110” on Linux After Dual Booting

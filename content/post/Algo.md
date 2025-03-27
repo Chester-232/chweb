@@ -2,7 +2,7 @@
 date = "2025-03-22T21:21:43+08:00"
 draft = false
 title = "Understanding Algorithms and Pseudocode"
-tags = ["Programming", "Pseudocode"]
+tags = ["Algorithm", "Pseudocode"]
 summary = "A beginner-friendly guide to understanding algorithms and pseudocode, with simple and complex examples."
 
 [params]

@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Chester&#39;s 2nd Brain</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Mar 2025 22:23:14 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Mar 2025 12:43:07 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is the Triple Equal Operator in Javascript?</title>
+      <link>http://localhost:1313/post/what-is-the-triple-equal-operator-in-javascript/</link>
+      <pubDate>Thu, 27 Mar 2025 12:39:42 +0800</pubDate>
+      <guid>http://localhost:1313/post/what-is-the-triple-equal-operator-in-javascript/</guid>
+      <description>Understanding the difference between JavaScript&amp;rsquo;s == (loose equality) and === (strict equality) operators in javascript.</description>
+    </item>
     <item>
       <title>Sample</title>
       <link>http://localhost:1313/post/sample/</link>
