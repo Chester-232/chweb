@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Calculus on Chester&#39;s 2nd Brain</title>
+    <link>http://localhost:1313/tags/calculus/</link>
+    <description>Recent content in Calculus on Chester&#39;s 2nd Brain</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Mar 2025 23:20:16 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Differentiation Techniques</title>
+      <link>http://localhost:1313/post/differentiation-techniques/</link>
+      <pubDate>Mon, 31 Mar 2025 22:24:23 +0800</pubDate>
+      <guid>http://localhost:1313/post/differentiation-techniques/</guid>
+      <description>A comprehensive guide on how to apply fundamental differentiation techniques in calculus, covering the power, product, quotient, chain, implicit, and trigonometric rules with step-by-step examples.</description>
+    </item>
+  </channel>
+</rss>

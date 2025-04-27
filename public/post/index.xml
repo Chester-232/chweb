@@ -6,21 +6,21 @@
     <description>Recent content in Posts on Chester&#39;s 2nd Brain</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Mar 2025 12:43:07 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 31 Mar 2025 23:20:16 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Differentiation Techniques</title>
+      <link>http://localhost:1313/post/differentiation-techniques/</link>
+      <pubDate>Mon, 31 Mar 2025 22:24:23 +0800</pubDate>
+      <guid>http://localhost:1313/post/differentiation-techniques/</guid>
+      <description>A comprehensive guide on how to apply fundamental differentiation techniques in calculus, covering the power, product, quotient, chain, implicit, and trigonometric rules with step-by-step examples.</description>
+    </item>
     <item>
       <title>What Is the Triple Equal Operator in Javascript?</title>
       <link>http://localhost:1313/post/what-is-the-triple-equal-operator-in-javascript/</link>
       <pubDate>Thu, 27 Mar 2025 12:39:42 +0800</pubDate>
       <guid>http://localhost:1313/post/what-is-the-triple-equal-operator-in-javascript/</guid>
       <description>Understanding the difference between JavaScript&amp;rsquo;s == (loose equality) and === (strict equality) operators in javascript.</description>
-    </item>
-    <item>
-      <title>Sample</title>
-      <link>http://localhost:1313/post/sample/</link>
-      <pubDate>Wed, 26 Mar 2025 22:17:38 +0800</pubDate>
-      <guid>http://localhost:1313/post/sample/</guid>
-      <description>Sample post that will never go online</description>
     </item>
     <item>
       <title>Fixing &#39;iwlwifi failed with error -110&#39; on Linux After Dual Boot with Windows</title>
