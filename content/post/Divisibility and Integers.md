@@ -1,6 +1,6 @@
 +++
 date = '2025-03-31T22:24:23+08:00'
-draft = true
+draft = false
 title = 'Divisibility and number theory'
 summary = "A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation."
 tags = [ "Discrete Mathematics" ]
