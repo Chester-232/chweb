@@ -1,8 +1,8 @@
 +++
 date = '2025-03-31T22:24:23+08:00'
 draft = false
-title = 'Divisibility and number theory'
-summary = "A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation."
+title = 'Divisibility and Number Theory: A Beginner’s Guide'
+summary = "Learn the basics of divisibility rules, prime and composite numbers, GCD, LCM, and how to convert numbers between different systems using simple methods."
 tags = [ "Discrete Mathematics" ]
 [params]
 math = true
@@ -156,6 +156,7 @@ A number is divisible by 12 if it is divisible by **both 3 and 4**.
   - $5 + 2 + 4 = 11$ ⇒ $3 \nmid 11$  
   ⇒ ❌
 
+
 ---
 
 ## Prime Numbers
@@ -195,6 +196,28 @@ The **GCD** of two or more integers is the largest positive integer that divides
 
 **Common factors:** $3 \times 5^2 = 75$  
 ⇒ $\gcd(375, 525) = 75$
+
+---
+
+**Euclidean algorithm method:**
+
+Formula: $a = bq + r$
+
+where  
+- $q$ is the quotient (the largest integer such that $bq \le a$),  
+- $r = a - bq$ is the remainder.  
+
+
+1. $525 = 375(1) + 150$
+2. $375 = 150(2) + 75$
+3. $150 = 75(2) + 0$  
+
+When the remainder is zero, the last nonzero remainder is the GCD:
+
+$$
+\gcd(375, 525) = 75
+$$
+
 
 ---
 
@@ -238,42 +261,179 @@ Example: `0x1F` (31 in decimal)
 
 ---
 
-## Conversion Between Number Systems Using the Euclidean Method
+Here’s how to convert between different number systems using the Euclidean method. I'll give examples for converting **Decimal to Binary**, **Decimal to Octal**, **Decimal to Hexadecimal**, and **Binary to Decimal**:
 
-The Euclidean algorithm is used for converting between different bases manually. Below is the step-by-step process of converting a decimal number to any base using the Euclidean method.
 
-### Example 1: Convert 156 to Binary (Base 2)
+## Number Systems Conversion Using the Euclidean Method
 
-1. Divide 156 by 2:  
-   156 ÷ 2 = 78 remainder 0
-2. Divide 78 by 2:  
-   78 ÷ 2 = 39 remainder 0
-3. Divide 39 by 2:  
-   39 ÷ 2 = 19 remainder 1
-4. Divide 19 by 2:  
-   19 ÷ 2 = 9 remainder 1
-5. Divide 9 by 2:  
-   9 ÷ 2 = 4 remainder 1
-6. Divide 4 by 2:  
-   4 ÷ 2 = 2 remainder 0
-7. Divide 2 by 2:  
-   2 ÷ 2 = 1 remainder 0
-8. Divide 1 by 2:  
-   1 ÷ 2 = 0 remainder 1
+### 1. **Decimal to Binary (Base 2)**
+To convert a decimal number to binary, repeatedly divide the number by 2 and record the remainders. The binary number is the sequence of remainders read from bottom to top.
 
-Now, read the remainders from bottom to top:  
-$156_{10} = 10011100_2$
+**Example 1: Decimal 13 to Binary**
 
-### Example 2: Convert 156 to Hexadecimal (Base 16)
+- 13 ÷ 2 = 6, remainder 1
+- 6 ÷ 2 = 3, remainder 0
+- 3 ÷ 2 = 1, remainder 1
+- 1 ÷ 2 = 0, remainder 1
 
-1. Divide 156 by 16:  
-   156 ÷ 16 = 9 remainder 12 (12 in hexadecimal is C)
-2. Divide 9 by 16:  
-   9 ÷ 16 = 0 remainder 9
-
-Now, read the remainders from bottom to top:  
-$156_{10} = 9C_{16}$
-
-This method can be applied to convert between any number systems by following similar steps for division and taking remainders.
+Binary: **1101**
 
 ---
+
+**Example 2: Decimal 25 to Binary**
+
+- 25 ÷ 2 = 12, remainder 1
+- 12 ÷ 2 = 6, remainder 0
+- 6 ÷ 2 = 3, remainder 0
+- 3 ÷ 2 = 1, remainder 1
+- 1 ÷ 2 = 0, remainder 1
+
+Binary: **11001**
+
+---
+
+**Example 3: Decimal 56 to Binary**
+
+- 56 ÷ 2 = 28, remainder 0
+- 28 ÷ 2 = 14, remainder 0
+- 14 ÷ 2 = 7, remainder 0
+- 7 ÷ 2 = 3, remainder 1
+- 3 ÷ 2 = 1, remainder 1
+- 1 ÷ 2 = 0, remainder 1
+
+Binary: **111000**
+
+---
+
+**Example 4: Decimal 7 to Binary**
+
+- 7 ÷ 2 = 3, remainder 1
+- 3 ÷ 2 = 1, remainder 1
+- 1 ÷ 2 = 0, remainder 1
+
+Binary: **111**
+
+---
+
+### 2. **Decimal to Octal (Base 8)**
+To convert a decimal number to octal, divide the number by 8 and record the remainders. The octal number is the sequence of remainders read from bottom to top.
+
+**Example 1: Decimal 65 to Octal**
+
+- 65 ÷ 8 = 8, remainder 1
+- 8 ÷ 8 = 1, remainder 0
+- 1 ÷ 8 = 0, remainder 1
+
+Octal: **101**
+
+---
+
+**Example 2: Decimal 128 to Octal**
+
+- 128 ÷ 8 = 16, remainder 0
+- 16 ÷ 8 = 2, remainder 0
+- 2 ÷ 8 = 0, remainder 2
+
+Octal: **200**
+
+---
+
+**Example 3: Decimal 255 to Octal**
+
+- 255 ÷ 8 = 31, remainder 7
+- 31 ÷ 8 = 3, remainder 7
+- 3 ÷ 8 = 0, remainder 3
+
+Octal: **377**
+
+---
+
+**Example 4: Decimal 43 to Octal**
+
+- 43 ÷ 8 = 5, remainder 3
+- 5 ÷ 8 = 0, remainder 5
+
+Octal: **53**
+
+---
+
+### 3. **Decimal to Hexadecimal (Base 16)**
+To convert a decimal number to hexadecimal, divide the number by 16 and record the remainders. The hexadecimal number is the sequence of remainders read from bottom to top.
+
+**Example 1: Decimal 34 to Hexadecimal**
+
+- 34 ÷ 16 = 2, remainder 2
+- 2 ÷ 16 = 0, remainder 2
+
+Hexadecimal: **22**
+
+---
+
+**Example 2: Decimal 255 to Hexadecimal**
+
+- 255 ÷ 16 = 15, remainder 15 (F)
+- 15 ÷ 16 = 0, remainder 15 (F)
+
+Hexadecimal: **FF**
+
+---
+
+**Example 3: Decimal 501 to Hexadecimal**
+
+- 501 ÷ 16 = 31, remainder 5
+- 31 ÷ 16 = 1, remainder 15 (F)
+- 1 ÷ 16 = 0, remainder 1
+
+Hexadecimal: **1F5**
+
+---
+
+**Example 4: Decimal 56 to Hexadecimal**
+
+- 56 ÷ 16 = 3, remainder 8
+- 3 ÷ 16 = 0, remainder 3
+
+Hexadecimal: **38**
+
+---
+
+### 4. **Binary to Decimal (Base 10)**
+To convert a binary number to decimal, multiply each binary digit by the corresponding power of 2, starting from the rightmost digit (least significant bit). Sum the results.
+
+**Example 1: Binary 1101 to Decimal**
+
+- $(1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$  
+- $8 + 4 + 0 + 1 = 13$
+
+Decimal: **13**
+
+---
+
+**Example 2: Binary 10101 to Decimal**
+
+- $(1 \times 2^4) + (0 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$  
+- $16 + 0 + 4 + 0 + 1 = 21$
+
+Decimal: **21**
+
+---
+
+**Example 3: Binary 111000 to Decimal**
+
+- $(1 \times 2^5) + (1 \times 2^4) + (1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (0 \times 2^0)$  
+- $32 + 16 + 8 + 0 + 0 + 0 = 56$
+
+Decimal: **56**
+
+---
+
+**Example 4: Binary 1111 to Decimal**
+
+- $(1 \times 2^3) + (1 \times 2^2) + (1 \times 2^1) + (1 \times 2^0)$  
+- $8 + 4 + 2 + 1 = 15$
+
+Decimal: **15**
+
+---
+
+These examples demonstrate how the Euclidean method works for converting numbers between different systems! Let me know if you need more details or examples.

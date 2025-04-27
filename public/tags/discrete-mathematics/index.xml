@@ -6,14 +6,14 @@
     <description>Recent content in Discrete Mathematics on Chester&#39;s 2nd Brain</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Apr 2025 21:13:41 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Apr 2025 21:41:01 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/discrete-mathematics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Divisibility and number theory</title>
+      <title>Divisibility and Number Theory: A Beginner’s Guide</title>
       <link>http://localhost:1313/post/divisibility-and-integers/</link>
       <pubDate>Mon, 31 Mar 2025 22:24:23 +0800</pubDate>
       <guid>http://localhost:1313/post/divisibility-and-integers/</guid>
-      <description>A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation.</description>
+      <description>Learn the basics of divisibility rules, prime and composite numbers, GCD, LCM, and how to convert numbers between different systems using simple methods.</description>
     </item>
   </channel>
 </rss>
