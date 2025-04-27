@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Chester&#39;s 2nd Brain</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Mar 2025 23:20:16 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Apr 2025 21:13:41 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Differentiation Techniques</title>
@@ -14,6 +14,13 @@
       <pubDate>Mon, 31 Mar 2025 22:24:23 +0800</pubDate>
       <guid>http://localhost:1313/post/differentiation-techniques/</guid>
       <description>A comprehensive guide on how to apply fundamental differentiation techniques in calculus, covering the power, product, quotient, chain, implicit, and trigonometric rules with step-by-step examples.</description>
+    </item>
+    <item>
+      <title>Divisibility and number theory</title>
+      <link>http://localhost:1313/post/divisibility-and-integers/</link>
+      <pubDate>Mon, 31 Mar 2025 22:24:23 +0800</pubDate>
+      <guid>http://localhost:1313/post/divisibility-and-integers/</guid>
+      <description>A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation.</description>
     </item>
     <item>
       <title>What Is the Triple Equal Operator in Javascript?</title>

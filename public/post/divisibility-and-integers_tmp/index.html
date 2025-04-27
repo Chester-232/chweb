@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='http://localhost:1313/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:1313/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
+    <title> - Chester&#39;s 2nd Brain</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/github-mark-white.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    
+
+    
+    <meta name="description"
+  content="&lt;!DOCTYPE html&gt;Divisibility and Integers.md&#43;&#43;&#43;
+date = &#39;2025-03-31T22:24:23&#43;08:00&#39;
+draft = true
+title = &#39;Divisibility and number theory&#39;
+summary = &quot;A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation.&quot;
+tags = [ &quot;Discrete Mathematics&quot; ]
+[params]
+math = true
+&#43;&#43;&#43;
+" />
+<meta name="keywords"
+  content='blog, google analytics' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/post/divisibility-and-integers_tmp/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content=" - Chester&#39;s 2nd Brain" />
+<meta name="twitter:description"
+  content="&lt;!DOCTYPE html&gt;Divisibility and Integers.md&#43;&#43;&#43;
+date = &#39;2025-03-31T22:24:23&#43;08:00&#39;
+draft = true
+title = &#39;Divisibility and number theory&#39;
+summary = &quot;A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation.&quot;
+tags = [ &quot;Discrete Mathematics&quot; ]
+[params]
+math = true
+&#43;&#43;&#43;
+" />
+<meta name="twitter:site" content="http://localhost:1313/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="http://localhost:1313/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content=" - Chester&#39;s 2nd Brain">
+<meta property="og:description"
+  content="&lt;!DOCTYPE html&gt;Divisibility and Integers.md&#43;&#43;&#43;
+date = &#39;2025-03-31T22:24:23&#43;08:00&#39;
+draft = true
+title = &#39;Divisibility and number theory&#39;
+summary = &quot;A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation.&quot;
+tags = [ &quot;Discrete Mathematics&quot; ]
+[params]
+math = true
+&#43;&#43;&#43;
+" />
+<meta property="og:url" content="http://localhost:1313/post/divisibility-and-integers_tmp/" />
+<meta property="og:site_name" content="" />
+<meta property="og:image"
+  content="http://localhost:1313/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+      svg: {fontCache: 'global'}
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="http://localhost:1313/">
+        <img class="octicon" height="32" width="32" src="/images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="http://localhost:1313/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
+                  <img class=" avatar-user"
+                    src="/images/aqua.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="http://localhost:1313/">Mekimemo</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="http://localhost:1313/post/divisibility-and-integers_tmp/"></a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Mon, 01 Jan 0001 00:00:00 &#43;0000"
+                    class="no-wrap">
+                    Mon, 01 Jan 0001 00:00:00 &#43;0000</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sun, 27 Apr 2025 21:13:41 &#43;0800"
+                    class="no-wrap">
+                    Sun, 27 Apr 2025 21:13:41 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      1147 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><!DOCTYPE html>
+<html>
+
+<head>
+    <title>Divisibility and Integers.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///home/chester/SharedFolder/Coding%20Projects/Webdev/chester-232/R%3A%5C2.Travail%5C1.Enseignement%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css"><link rel="stylesheet" href="file:///home/chester/SharedFolder/Coding%20Projects/Webdev/chester-232/D%3A%5Crdaros%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css">
+</head>
+
+<body>
+    <p>+++<br>
+date = '2025-03-31T22:24:23+08:00'<br>
+draft = true<br>
+title = 'Divisibility and number theory'<br>
+summary = &quot;A comprehensive guide on divisibility rules, prime and composite numbers, GCD, and LCM, with manual number conversions using the Euclidean method for number system representation.&quot;<br>
+tags = [ &quot;Discrete Mathematics&quot; ]<br>
+[params]<br>
+math = true<br>
++++</p>
+<h2 id="number-theory-aka-higher-arithmetic">Number Theory (A.K.A. Higher Arithmetic)</h2>
+<p>A branch of mathematics concerned with the properties of integers.</p>
+<hr>
+<h2 id="divisibility">Divisibility</h2>
+<p>Divisibility means dividing one number evenly by another, without leaving a remainder.</p>
+<ul>
+<li>$d \mid n$ means that $d$ divides $n$</li>
+<li>$d \nmid n$ means that $d$ does not divide $n$</li>
+<li>Conditions:
+<ul>
+<li>$d \neq 0$</li>
+<li>$n \neq 0$</li>
+<li>If $d \times q = n$, then $q = \frac{n}{d}$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="divisibility-rules">Divisibility Rules</h2>
+<h3 id="rule-for-2">Rule for 2</h3>
+<p>A number is divisible by 2 if its <strong>last digit</strong> is even (i.e. 0, 2, 4, 6, or 8).</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$2 \mid 128$ → 8 is even ⇒ ✅</li>
+<li>$2 \nmid 129$ → 9 is odd ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-3">Rule for 3</h3>
+<p>A number is divisible by 3 if the <strong>sum of its digits</strong> is divisible by 3.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$3 \mid 381$:<br>
+$3 + 8 + 1 = 12$ → $3 \mid 12$ ⇒ ✅</li>
+<li>$3 \nmid 217$:<br>
+$2 + 1 + 7 = 10$ → $3 \nmid 10$ ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-4">Rule for 4</h3>
+<p>A number is divisible by 4 if the <strong>last two digits</strong> form a number divisible by 4.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$4 \mid 1312$:<br>
+Last two digits: 12 → $4 \mid 12$ ⇒ ✅</li>
+<li>$4 \nmid 7019$:<br>
+Last two digits: 19 → $4 \nmid 19$ ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-5">Rule for 5</h3>
+<p>A number is divisible by 5 if its <strong>last digit</strong> is either 0 or 5.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$5 \mid 205$ → Last digit is 5 ⇒ ✅</li>
+<li>$5 \nmid 128$ → Last digit is 8 ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-6">Rule for 6</h3>
+<p>A number is divisible by 6 if it is divisible by <strong>both 2 and 3</strong>.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$6 \mid 114$:
+<ul>
+<li>Divisible by 2: last digit 4 is even ⇒ ✅</li>
+<li>Divisible by 3: $1 + 1 + 4 = 6$ → $3 \mid 6$ ⇒ ✅</li>
+</ul>
+</li>
+<li>$6 \nmid 308$:
+<ul>
+<li>Divisible by 2: 8 is even ⇒ ✅</li>
+<li>Not divisible by 3: $3 + 0 + 8 = 11$ ⇒ ❌</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="rule-for-7">Rule for 7</h3>
+<p>Take the last digit, double it, and subtract it from the rest of the number. If the result is divisible by 7, then the number is divisible by 7.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$7 \mid 672$:<br>
+$67 - 2 \times 2 = 63$ → $7 \mid 63$ ⇒ ✅</li>
+<li>$7 \nmid 905$:<br>
+$90 - 2 \times 5 = 80$ → $7 \nmid 80$ ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-8">Rule for 8</h3>
+<p>A number is divisible by 8 if the <strong>last three digits</strong> form a number divisible by 8.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$8 \mid 109816$:<br>
+Last three digits: 816 → $8 \mid 816$ ⇒ ✅</li>
+<li>$8 \nmid 216302$:<br>
+Last three digits: 302 → $8 \nmid 302$ ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-9">Rule for 9</h3>
+<p>A number is divisible by 9 if the <strong>sum of its digits</strong> is divisible by 9.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>$9 \mid 1629$:<br>
+$1 + 6 + 2 + 9 = 18$ → $9 \mid 18$ ⇒ ✅</li>
+</ul>
+<hr>
+<h3 id="rule-for-10">Rule for 10</h3>
+<p>A number is divisible by 10 if it ends in <strong>0</strong>.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$10 \mid 130$ → ends in 0 ⇒ ✅</li>
+<li>$10 \nmid 131$ → ends in 1 ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-11">Rule for 11</h3>
+<p>A number is divisible by 11 if the <strong>alternating sum of its digits</strong> (i.e., subtracting every other digit) is divisible by 11 or equals 0.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$11 \mid 3729$:<br>
+$(3 + 2) - (7 + 9) = 5 - 16 = -11$ ⇒ $11 \mid 11$ ⇒ ✅</li>
+<li>$11 \nmid 987$:<br>
+$(9 + 7) - 8 = 16 - 8 = 8$ ⇒ $11 \nmid 8$ ⇒ ❌</li>
+</ul>
+<hr>
+<h3 id="rule-for-12">Rule for 12</h3>
+<p>A number is divisible by 12 if it is divisible by <strong>both 3 and 4</strong>.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>$12 \mid 648$:
+<ul>
+<li>$6 + 4 + 8 = 18$ ⇒ $3 \mid 18$</li>
+<li>Last two digits: 48 ⇒ $4 \mid 48$<br>
+⇒ ✅</li>
+</ul>
+</li>
+<li>$12 \nmid 524$:
+<ul>
+<li>$5 + 2 + 4 = 11$ ⇒ $3 \nmid 11$<br>
+⇒ ❌</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="prime-numbers">Prime Numbers</h2>
+<p>These are <strong>positive integers greater than 1</strong> that are only divisible by <strong>1 and themselves</strong>.</p>
+<p><strong>Examples:</strong> 2, 3, 5, 7, 11, 13, ...</p>
+<hr>
+<h2 id="composite-numbers">Composite Numbers</h2>
+<p>Composite numbers are <strong>positive integers greater than 1</strong> that are <strong>not prime</strong>.<br>
+They have more than two distinct positive divisors.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>4 → $2 \times 2$</li>
+<li>9 → $3 \times 3$</li>
+<li>12 → $2 \times 2 \times 3$</li>
+</ul>
+<hr>
+<h2 id="greatest-common-divisor-gcd">Greatest Common Divisor (GCD)</h2>
+<p>The <strong>GCD</strong> of two or more integers is the largest positive integer that divides each of the numbers.</p>
+<ul>
+<li>Denoted as $\gcd(a, b)$</li>
+<li>Can be found using <strong>prime factorization</strong> or the <strong>Euclidean algorithm</strong></li>
+</ul>
+<h3 id="example-gcd-of-375-and-525">Example: GCD of 375 and 525</h3>
+<p><strong>Prime factorization method:</strong></p>
+<ul>
+<li>375 = $3 \times 5^3$</li>
+<li>525 = $3 \times 5^2 \times 7$</li>
+</ul>
+<p><strong>Common factors:</strong> $3 \times 5^2 = 75$<br>
+⇒ $\gcd(375, 525) = 75$</p>
+<hr>
+<h2 id="least-common-multiple-lcm">Least Common Multiple (LCM)</h2>
+<p>The <strong>LCM</strong> of two or more integers is the smallest number that is a multiple of all the given numbers.</p>
+<ul>
+<li>Denoted as $\text{lcm}(a, b)$</li>
+<li>Often found using prime factorization or the formula:<br>
+$\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}$</li>
+</ul>
+<p><strong>Example:</strong></p>
+<h3 id="lcm-of-12-and-18">LCM of 12 and 18</h3>
+<ul>
+<li>$\gcd(12, 18) = 6$</li>
+<li>$\text{lcm}(12, 18) = \frac{12 \times 18}{6} = 36$</li>
+</ul>
+<hr>
+<h2 id="number-systems">Number Systems</h2>
+<h3 id="decimal-base-10">Decimal (Base 10)</h3>
+<p>Digits: 0–9<br>
+Example: <code>123</code>, <code>45</code></p>
+<h3 id="binary-base-2">Binary (Base 2)</h3>
+<p>Digits: 0, 1<br>
+Prefix: <code>0b</code> or <code>0x</code> in some notations<br>
+Example: <code>0b1010</code> (10 in decimal)</p>
+<h3 id="octal-base-8">Octal (Base 8)</h3>
+<p>Digits: 0–7<br>
+Prefix: <code>0o</code><br>
+Example: <code>0o17</code> (15 in decimal)</p>
+<h3 id="hexadecimal-base-16">Hexadecimal (Base 16)</h3>
+<p>Digits: 0–9 and A–F (A=10, B=11, ..., F=15)<br>
+Prefix: <code>0x</code><br>
+Example: <code>0x1F</code> (31 in decimal)</p>
+<hr>
+<h2 id="conversion-between-number-systems-using-the-euclidean-method">Conversion Between Number Systems Using the Euclidean Method</h2>
+<p>The Euclidean algorithm is used for converting between different bases manually. Below is the step-by-step process of converting a decimal number to any base using the Euclidean method.</p>
+<h3 id="example-1-convert-156-to-binary-base-2">Example 1: Convert 156 to Binary (Base 2)</h3>
+<ol>
+<li>Divide 156 by 2:<br>
+156 ÷ 2 = 78 remainder 0</li>
+<li>Divide 78 by 2:<br>
+78 ÷ 2 = 39 remainder 0</li>
+<li>Divide 39 by 2:<br>
+39 ÷ 2 = 19 remainder 1</li>
+<li>Divide 19 by 2:<br>
+19 ÷ 2 = 9 remainder 1</li>
+<li>Divide 9 by 2:<br>
+9 ÷ 2 = 4 remainder 1</li>
+<li>Divide 4 by 2:<br>
+4 ÷ 2 = 2 remainder 0</li>
+<li>Divide 2 by 2:<br>
+2 ÷ 2 = 1 remainder 0</li>
+<li>Divide 1 by 2:<br>
+1 ÷ 2 = 0 remainder 1</li>
+</ol>
+<p>Now, read the remainders from bottom to top:<br>
+$156_{10} = 10011100_2$</p>
+<h3 id="example-2-convert-156-to-hexadecimal-base-16">Example 2: Convert 156 to Hexadecimal (Base 16)</h3>
+<ol>
+<li>Divide 156 by 16:<br>
+156 ÷ 16 = 9 remainder 12 (12 in hexadecimal is C)</li>
+<li>Divide 9 by 16:<br>
+9 ÷ 16 = 0 remainder 9</li>
+</ol>
+<p>Now, read the remainders from bottom to top:<br>
+$156_{10} = 9C_{16}$</p>
+<p>This method can be applied to convert between any number systems by following similar steps for division and taking remainders.</p>
+<hr>
+
+</body>
+
+</html></article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='http://localhost:1313/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:1313/css/toc.css' />
+
+  
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="http://localhost:1313/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='http://localhost:1313/js/search.js'></script>
+
+
+
+</html>

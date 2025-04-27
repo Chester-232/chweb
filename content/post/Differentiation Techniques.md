@@ -20,6 +20,8 @@ __Rule:__ The derivative of a constant is always 0
 
 __Example:__
 
+$f(x) = 3x^2$
+
 if $f(x) = 7 $, then $$ f`(x) = 0 $$
 
 ## 2. Power Rule
@@ -37,7 +39,7 @@ $$ f\`(x) = 9x^2 $$
 ## Product Rule
 __Rule:__ For the product of two functions, if $f(x) = g(x)h(x)$, then $$ f\`(x) = g(x)h\`(x) + h(x)\`g(x) $$
 
-> In words: first times the derivative of second plus second time the derivative of first
+> In words: first times the derivative of second, plus second time the derivative of first
 
 __Example:__
 
